@@ -1,0 +1,306 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "87724f3a-922e-451e-b5b9-b2103564566c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "h = int(input(\"veuillez saisir l'heure :\"))\n",
+    "m = int(input(\"veuillez saisir les minutes:\"))\n",
+    "m = m+1\n",
+    "if m < 60 :\n",
+    "    print( \" la date dans une minutes sera\", h ,\" heure(s) \", m , \"minutes\" )\n",
+    "elif m>=60 :\n",
+    "    if h < 23 :\n",
+    "        h=m//60\n",
+    "        h=h+p\n",
+    "        m=m%60\n",
+    "        m=n\n",
+    "        print( \" la date dans une minutes sera\", h ,\" heure(s) \", m , \"minutes\" )\n",
+    "    else :\n",
+    "        h=0\n",
+    "        n=m%60\n",
+    "        m=n\n",
+    "        print( \" la date dans une minutes sera\", h ,\" heure(s) \", m , \"minutes\" )\n",
+    "else:\n",
+    "    print( \"erreur\")\n",
+    "    \n",
+    "        \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "775a8404-f3cc-46b0-9e05-b61d0341dc7c",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "h=int(input( \"veuillez saisir le nombres d'heures:\"))\n",
+    "p=int(input( \"veuillez saisir le prix initiale d'une heure:\"))\n",
+    "h1=39\n",
+    "h2=h-39\n",
+    "h3=h-44\n",
+    "h4=h-49\n",
+    "if 0<h<=39:\n",
+    "    print (\"votre montant est : \", p*h ,\"dh\")\n",
+    "elif 40<=h<=44 :\n",
+    "    p=(p*h1)+((p*1.5)*h2)\n",
+    "    print(\"votre montant est : \", p ,\"dh\")\n",
+    "elif 45<=h<=49:\n",
+    "    p=(p*h1)+((p*1.5)*5)+((p*1.75)*h3)\n",
+    "    print(\"votre montant est : \", p ,\"dh\")\n",
+    "elif 50<=h :\n",
+    "    p=(p*h1)+((p*5)*1.5)+((p*5)*1.75)+((p*h4)*2)\n",
+    "    print(\"votre montant est : \", p ,\"dh\")\n",
+    "else :\n",
+    "    print(\"erreur\")\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5e495052-0d15-4026-aaef-4012433270a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n=int(input( \"saisir un nombre entre 10 et 20:\" ))\n",
+    "if n<10:\n",
+    "      print(\"plus grand!\")\n",
+    "elif n>20:\n",
+    "      print(\"plus petit!\")\n",
+    "else:\n",
+    "      print(\"c'est entre 10 et 20\")\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fbc3d76f-d18a-4cc3-b52b-c4ec108502de",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "qu'elle est la taille de la liste que vous allez saisir ? 3\n",
+      "veuiller saisir l'element 1 de votre liste  1\n",
+      "veuiller saisir l'element 2 de votre liste  5\n",
+      "veuiller saisir l'element 3 de votre liste  3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "la liste: [1, 5, 3]\n",
+      " l'indexe 0 a 1\n",
+      " l'indexe 1 a 5\n",
+      " l'indexe 2 a 3\n",
+      " la somme des element de la liste: 9\n",
+      " le plus petit est  1\n",
+      "le plus grand elemnet de la liste est : 5\n",
+      " le nombre des pairs de la liste 0\n",
+      " la somme des impaires: 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input(\"qu'elle est la taille de la liste que vous allez saisir ?\"))\n",
+    "L=[]\n",
+    "for i in range(n):\n",
+    "    a=int(input(f\"veuiller saisir l'element {i+1} de votre liste \"))\n",
+    "    L.append(a)\n",
+    "print(\"la liste:\",L)\n",
+    "for i in range (n):\n",
+    "    print(\" l'indexe\",i,\"a\" ,L[i])\n",
+    "\n",
+    "S=0\n",
+    "mi=L[0]\n",
+    "ma=L[0]\n",
+    "pair=0\n",
+    "impair=0\n",
+    "for i in range(n) :\n",
+    "    S=S+L[i]\n",
+    "print(f\" la somme des element de la liste:\",S)\n",
+    "for i in range(n) :\n",
+    "    if L[i]<mi:\n",
+    "        mi=L[i]\n",
+    "print(\" le plus petit est \",mi)\n",
+    "for i in range(n) :\n",
+    "    if L[i]>ma:\n",
+    "        ma=L[i]\n",
+    "print(\"le plus grand elemnet de la liste est :\",ma)\n",
+    "for i in range(n):\n",
+    "    if L[i]%2==0:\n",
+    "        pair+=1\n",
+    "print(\" le nombre des pairs de la liste\",pair)\n",
+    "for i in range(n) :\n",
+    "    if L[i]%2!=0:\n",
+    "        impair=impair+L[i]\n",
+    "print(\" la somme des impaires:\",impair)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "3b5b49f5-d3c5-4ab1-a63f-8ae0f95f1e4e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "qu'elle est la taille de la liste que vous allez saisir ? 5\n",
+      "veuiller saisir l'element 1 de votre liste  1\n",
+      "veuiller saisir l'element 2 de votre liste  2\n",
+      "veuiller saisir l'element 3 de votre liste  3\n",
+      "veuiller saisir l'element 4 de votre liste  2\n",
+      "veuiller saisir l'element 5 de votre liste  4\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "la nouvelle liste est [1, 2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input(\"qu'elle est la taille de la liste que vous allez saisir ?\"))\n",
+    "L=[]\n",
+    "for i in range(n):\n",
+    "    a=int(input(f\"veuiller saisir l'element {i+1} de votre liste \"))\n",
+    "    L.append(a)\n",
+    "P=[]\n",
+    "for i in range(n):\n",
+    "        if L[i] not in P:\n",
+    "            P.append(L[i])\n",
+    "print(\"la nouvelle liste est\",P) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "b2bc6bcb-eef3-49fa-8c76-0ffdb584b283",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "le deuxieme element de la liste [5, 6, 7, 8]\n",
+      "le quatrieme element de la 2eme liste 8\n",
+      "le 2eme element de l 3eme liste  10\n",
+      "la somme des element de la liste: [10, 36, 78]\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=[[1,2,3,4],[5,6,7,8],[9,10,11,12]]\n",
+    "print(\"le deuxieme element de la liste\",L[1])\n",
+    "print(\"le quatrieme element de la 2eme liste\",L[1][3])\n",
+    "print(\"le 2eme element de l 3eme liste \",L[2][1])\n",
+    "L1=[]\n",
+    "S=0\n",
+    "for i in range (3):\n",
+    "      for j in range (4):\n",
+    "             S=S+L[i][j]\n",
+    "      L1.append(S)\n",
+    "print(f\"la somme des element de la liste:\",L1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "4558a445-566f-40c7-85b4-68b3ed7907ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "le dictionnaire corrige {'nom': 'Dupuis', 'prenom': 'Jacques', 'age': '30'}\n",
+      "la liste des cles  ['nom', 'prenom', 'age']\n",
+      "la liste des valeurs  ['Dupuis', 'Jacques', '30']\n",
+      "la liste des cles/valeurs pair [['prenom', 'Jacques']]\n",
+      "Jacques Dupuis a 30 ans\n"
+     ]
+    }
+   ],
+   "source": [
+    "d={'nom':'Dupuis','prenom':'Jacque','age':'30'}\n",
+    "d['prenom']='Jacques'\n",
+    "print(\"le dictionnaire corrige\",d)\n",
+    "\n",
+    "p=list(d.keys())\n",
+    "print('la liste des cles ',p)\n",
+    "h=list(d.values())\n",
+    "print('la liste des valeurs ',h)\n",
+    "L=[]\n",
+    "for i in p:\n",
+    "    if len(i)%2==0:\n",
+    "        L.append([i,d[i]])\n",
+    "print('la liste des cles/valeurs pair',L)\n",
+    "print(d['prenom'],d['nom'],'a',d['age'],'ans')\n",
+    "        \n",
+    "\n",
+    "    \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b128c19b-9ff6-4955-87cb-d440b06d7091",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "anaconda-2024.02-py310",
+   "language": "python",
+   "name": "conda-env-anaconda-2024.02-py310-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.14"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
